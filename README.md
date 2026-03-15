@@ -13,7 +13,7 @@
 **love2d-vim-syntax** is a comprehensive plugin for [Vim](https://www.vim.org/) that highlight [LÖVE](http://love2d.org) syntax in your editor.
 
 - 🎨 **Syntax Highlighting** — Colors LÖVE functions, modules, types, and callbacks
-- 🔧 **Customizable** — Flexible styling options for both Neovim and Vim
+- 🔧 **Customizable** — Flexible styling options for Vim
 
 ### Features highlighted:
 
