@@ -1,6 +1,6 @@
 " Vim plugin for LÖVE syntax highlighting and help file
 " original:    https://github.com/davisdude/vim-love-docs
-" fork:        https://github.com/yorik1984/love2d-docs.nvim
+" fork:        https://github.com/yorik1984/love2d-vim-syntax
 " Last Change: Mar 2026
 " Maintainer:  Davis Claiborne <davisclaib@gmail.com>
 " Modified :   yorik1984 <yorik1984@gmail.com>
