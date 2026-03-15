@@ -107,12 +107,12 @@ syntax match LoveConf "t[.]audio[.]\%(mic\|mixwithsystem\)\>" contained contains
 
 " Highlighting
 
-execute( "highlight def Love " . g:love_colors_love )
-execute( "highlight def Lovet " . g:love_colors_module )
-execute( "highlight def LoveDot " . g:love_colors_module )
-execute( "highlight def LoveModule " . g:love_colors_module )
-execute( "highlight def LoveType " . g:love_colors_type )
-execute( "highlight def LoveFunction " . g:love_colors_function )
-execute( "highlight def LoveMethod " . g:love_colors_method )
-execute( "highlight def LoveCallback " . g:love_colors_callback )
-execute( "highlight def LoveConf " . g:love_colors_conf )
+execute "highlight def Love " . g:love_colors_love
+execute "highlight def Lovet " . g:love_colors_module
+execute "highlight def LoveDot " . g:love_colors_module
+execute "highlight def LoveModule " . g:love_colors_module
+execute "highlight def LoveType " . g:love_colors_type
+execute "highlight def LoveFunction " . g:love_colors_function
+execute "highlight def LoveMethod " . g:love_colors_method
+execute "highlight def LoveCallback " . g:love_colors_callback
+execute "highlight def LoveConf " . g:love_colors_conf
