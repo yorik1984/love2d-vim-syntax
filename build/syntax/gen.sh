@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Set the current directory to the location of this script
+pushd "$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )" > /dev/null
+
+# Quit on errors and unset vars
+set -o errexit
+set -o nounset
+
+# Copy love-api to child directories
+cp -rf love-api love-conf
+cp -rf love-api lua
+
+# Update after/syntax
+rm -f ../../after/syntax/lua.vim
+#
+# Update test/
+rm -f ../../test/example/api_full_list.lua
+rm -f ../../test/example/conf.lua
+
+# Create after/syntax
+$lua lua/main.lua > ../../after/syntax/lua.vim
+
+# Create test/
+$lua lua/generate_api_list.lua > ../../test/example/api_full_list.lua
+$lua lua/generate_conf.lua > ../../test/example/conf.lua
+
+# Cleanup
+rm -rf love-api
+rm -rf love-conf
+rm -rf lua/love-api
+
+popd > /dev/null

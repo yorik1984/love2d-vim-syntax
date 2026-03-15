@@ -1,0 +1,81 @@
+*love2d-vim-syntax*                                            LÖVE Vim Syntax
+
+                               o  o                    ~
+                      ╭─╮    ╭──────╮╭─╮    ╭─╮╭─────╮ ~
+                      │ │    │ ╭──╮ ││ │    │ ││ ╭───╯ ~
+                      │ │    │ │  │ │╰╮╰╮  ╭╯╭╯│ ╰───╮ ~
+                      │ │    │ │  │ │ ╰╮╰╮╭╯╭╯ │ ╭───╯ ~
+                      │ ╰───╮│ ╰──╯ │  ╰╮╰╯╭╯  │ ╰───╮ ~
+                      ╰─────╯╰──────╯   ╰──╯   ╰─────╯ ~
+                The highlighting solution for Vim with LÖVE.
+
+Vim syntax highlighting for LÖVE (http://love2d.org)
+
+The syntax highlights LÖVE functions, such as `love.udpate`,
+`love.graphics.rectangle`, and more. It also highlights
+`conf.lua` flags, such as `t.console`, `t.window.width`, etc.
+
+It is generated from https://github.com/love2d-community/love-api,
+so any discrepancies should be reported there.
+
+==============================================================================
+CONTENTS                                         *love2d-treesitter-contents*
+
+    1. Installation.........................|love2d-vim-syntax-installation|
+    2. Settings.............................|love2d-vim-syntax-settings|
+    3. Rebuilding the API...................|love2d-vim-syntax-build|
+    4. Credits..............................|love2d-vim-syntax-credits|
+
+==============================================================================
+1. INSTALLATION                              *love2d-vim-syntax-installation*
+
+VIM-PLUG ~
+>vim
+    Plug 'yorik1984/love2d-vim-syntax'
+<
+
+==============================================================================
+2. SETTINGS                                      *love2d-vim-syntax-settings*
+
+The style of the syntax highlighting can be changed by setting global
+variables in your `.vimrc`:
+
+>vim
+  let g:love_colors_love = 'guifg=#E54D95 ctermfg=162 gui=bold cterm=bold'
+<
+
+You can set the string to any valid highlighting specification
+(see |highlight-args|). Defaults are:
+
+Hl-Group     Variable Name          Parameters (GUI/CTERM) ~
+Love         g:love_colors_love     guifg=#E54D95 ctermfg=162 gui=bold cterm=bold
+Lovet        g:love_colors_module   guifg=#E54D95 ctermfg=162
+LoveDot      g:love_colors_module   guifg=#E54D95 ctermfg=162
+LoveModule   g:love_colors_module   guifg=#E54D95 ctermfg=162
+LoveType     g:love_colors_type     guifg=#E54D95 ctermfg=162
+LoveFunction g:love_colors_function guifg=#2FA8DC ctermfg=38
+LoveMethod   g:love_colors_method   guifg=#2FA8DC ctermfg=38
+LoveCallback g:love_colors_callback guifg=#2FA8DC ctermfg=38
+LoveConf     g:love_colors_conf     guifg=#2FA8DC ctermfg=38
+
+==============================================================================
+3. REBUILDING THE API                               *love2d-vim-syntax-build*
+
+If you wish to re-build the API files from source:
+1. Ensure `git` and `lua` are available in your PATH.
+2. Run `build/gen.bat` (Windows) or `build/gen.sh` (Linux/Mac).
+
+See more in `README.md`
+
+==============================================================================
+4. CREDITS                                        *love2d-vim-syntax-credits*
+
+Original Author: ~
+    Davis Claiborne (https://github.com/davisdude)
+                    (https://github.com/davisdude/vim-love-docs)
+
+Current Maintainer: ~
+    yorik1984 (https://github.com/yorik1984)
+
+==============================================================================
+vim:tw=78:ts=4:ft=help:norl:
